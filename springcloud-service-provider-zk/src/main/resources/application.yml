@@ -1,0 +1,16 @@
+server:
+  port: 8001 #配置服务端口号
+spring:
+  application:
+    name: service-provider # 配置服务提供方的名称
+  datasource:  # 配置连接数据库的基本信息
+    driver-class-name: com.mysql.jdbc.Driver   # 驱动
+    url: jdbc:mysql://localhost:3306/cloud2023  # 连接数据库的url
+    username: root   # 连接数据库的用户名
+    password: dyt15918781398   # 连接数据库的密码
+  cloud:
+    zookeeper:
+      connect-string: 110.42.214.75:2181
+mybatis:
+  config-location: classpath:/mybatis/sqlMapConfig.xml   # 引入mybatis的核心配置文件
+  mapper-locations: classpath:/mybatis/mapper/*.xml  # 引入mybatis的映射文件

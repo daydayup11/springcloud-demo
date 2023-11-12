@@ -1,0 +1,8 @@
+server:
+  port: 8004 #配置服务端口号
+spring:
+  application:
+    name: service-consumer # 配置服务提供方的名称
+  cloud:
+    zookeeper:
+      connect-string: 110.42.214.75:2181

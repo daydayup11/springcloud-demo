@@ -1,0 +1,21 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: service-consumer
+eureka:
+  client:
+    register-with-eureka: true # 允许将当前服务注册到eureka注册中心
+    fetch-registry: true # 允许当前微服务拉取注册中心中的服务信息
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/   # eureka注册中心的地址
+logging:
+  level:
+    org.mumu.PaymentClient: debug
+ribbon:
+  ConnectTimeout: 50000
+  ReadTimeout: 50000
+feign:
+  hystrix:
+    enabled: true
+
